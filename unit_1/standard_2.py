@@ -62,7 +62,7 @@
 #     for i in range(len(numbers)):
 #         numbers[i] **= 2
 #     return numbers
-# # ? can this be done with list comprehension
+# #? can this be done with list comprehension
 
 # numbers = [1, 2, 3]
 # print(squared(numbers))
@@ -120,14 +120,97 @@
 
 
 # problem 10
-def up_and_down(lst):
-    for i in 
+# def up_and_down(lst):
+#     even_count = 0
+#     odd_count = 0
+#     for ele in lst:
+#         if ele % 2 == 0:
+#             even_count += 1
+#         else:
+#             odd_count += 1
+#     return print(odd_count - even_count)
 
-lst = [1, 2, 3]
-up_and_down(lst)
 
-lst = [1, 3, 5]
-up_and_down(lst)
+# lst = [1, 2, 3]
+# up_and_down(lst)
 
-lst = [2, 4, 10, 2]
-up_and_down(lst)
+# lst = [1, 3, 5]
+# up_and_down(lst)
+
+# lst = [2, 4, 10, 2]
+# up_and_down(lst)
+
+# problem 11
+"""
+track sum for
+"""
+# def running_sum(superhero_stats):
+#     sum_count = 0
+#     for idx, month in enumerate(superhero_stats):
+#         print("\n\niter")
+#         print(f"idx:{idx},month:{month}, sum_count:{sum_count}")
+#         sum_count += month
+#         print(f"idx:{idx},month:{month}, sum_count:{sum_count}")
+#         month = sum_count
+#         superhero_stats[idx] = month
+#         print(f"idx:{idx},month:{month},sum_count: {sum_count}")
+#         print("Current: ",superhero_stats)
+#     return print("Final:\n", superhero_stats)
+
+
+# superhero_stats = [1, 2, 3, 4]
+# running_sum(superhero_stats)
+
+# superhero_stats = [1, 1, 1, 1, 1]
+# running_sum(superhero_stats)
+
+# superhero_stats = [3, 1, 2, 10, 1]
+# running_sum(superhero_stats)
+
+# Problem 12
+"""
+Get median idx
+add each element to new list 
+iterate for half of list size 
+turn old list into new list 
+"""
+
+
+def shuffle(cards):
+    start_idx = 0
+    mid_idx = len(cards) // 2
+    new_lst = []
+
+    while mid_idx != len(cards):
+        if start_idx != len(cards) // 2:
+            new_lst.append(cards[start_idx])
+            start_idx += 1
+        new_lst.append(cards[mid_idx])
+        mid_idx += 1
+
+    cards = new_lst
+
+    return print(cards)
+
+
+def shuffle2(cards):
+    n = len(cards) // 2
+    shuffled = []
+
+    for i in range(n):
+        shuffled.append(cards[i])
+        shuffled.append(cards[i + n])
+    if i < len(cards) // 2:
+        shuffled.append(cards[-1])
+    return print(shuffled)
+
+
+# cards = ["Joker", "Queen", 2, 3, "Ace", 7]
+# shuffle(cards)
+
+# cards = [9, 2, 3, "Joker", "Joker", 3, 2, 9]
+# shuffle(cards)
+
+cards = [10, 10, 2, 2, 3]
+shuffle2(cards)
+
