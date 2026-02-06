@@ -63,9 +63,27 @@ class problem_5:
     def sum_honey(hunny_jars):
         pass
 
-class problem_6:
-    def count_tails(animal_tails):
-        pass   
 
-class problem_7:
+
+class problem_6:
+    def doubled(hunny jars):
+        pass   
+    def tests(self):
+        hunny_jars = [1,2,3]
+        self.doubled(hunny_jars)
+
+class problem_*:
+    def *(self,*):
+        pass
     
+    def tests(self):
+        pass
+class problem_8:
+    def print_todo_list(self,task):
+    
+    def tests(self):
+        task = ["Count all the bees in the hive", "Chase all the clouds from the sky", "Think", "Stoutness Exercises"]
+    print_todo_list(task)
+
+    task = []
+    print_todo_list(task)
