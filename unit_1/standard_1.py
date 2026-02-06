@@ -72,12 +72,7 @@ class problem_6:
         hunny_jars = [1,2,3]
         self.doubled(hunny_jars)
 
-class problem_*:
-    def *(self,*):
-        pass
-    
-    def tests(self):
-        pass
+
 class problem_8:
     def print_todo_list(self,task):
     
