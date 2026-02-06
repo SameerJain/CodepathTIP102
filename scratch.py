@@ -1,7 +1,7 @@
 """
-U-get the sum of all ticket sales (dict values)
-P- iterate thru the dictionary, add up every value to a variable, return it 
-I- 
+U- get the sum of all ticket sales (dict values)
+P- iterate thru the dictionary, add up every value to a variable, return it
+I-
 """
 
 

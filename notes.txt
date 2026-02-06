@@ -12,3 +12,6 @@ create codebase skeleton
 create completion checklist 
 
 add a python debugger 
+# Time Complexity: O()
+# Space Complexity: O()
+add a doing right now reminder page 
