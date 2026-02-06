@@ -12,6 +12,10 @@ create codebase skeleton
 create completion checklist 
 
 add a python debugger 
-# Time Complexity: O()
-# Space Complexity: O()
-add a doing right now reminder page 
+add a doing right now reminder page
+
+add lesson notes from every week 
+add lecture notes from every week 
+add more folders for mock interviews and extra section 
+add resources notes
+download pip 
