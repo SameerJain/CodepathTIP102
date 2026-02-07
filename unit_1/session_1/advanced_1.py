@@ -100,28 +100,28 @@
 # print(tiggerfy(word))
 
 
-# def non_decreasing(nums):
-#     errors = 0
-#     for i in range(len(nums) - 1):
-#         if nums[i] > nums[i + 1]:
-#             errors += 1
-#             if errors > 1:
-#                 return False
-#             if i == 0 or nums[i - 1] > nums[i + 1]:
-#                 nums[i + 1] = nums[i]
-#             else:
-#                 nums[i] = nums[i + 1]
+def non_decreasing(nums):
+    errors = 0
+    for i in range(len(nums) - 1):
+        if nums[i] > nums[i + 1]:
+            errors += 1
+            if errors > 1:
+                return False
+            if i == 0 or nums[i - 1] > nums[i + 1]:
+                nums[i + 1] = nums[i]
+            else:
+                nums[i] = nums[i + 1]
 
-#     return True
+    return True
 
 
-# nums = [4, 2, 3]
-# print(non_decreasing(nums))
+nums = [4, 2, 3]
+print(non_decreasing(nums))
 
-# nums = [4, 2, 1]
-# print(non_decreasing(nums))
+nums = [4, 2, 1]
+print(non_decreasing(nums))
 
-# nums = [3, 4, 2, 3]
+nums = [3, 4, 2, 3]
 
 # problem 5
 
@@ -132,23 +132,4 @@ create iterator for lower bound
 keep incrementing until we are 1 less than the clue
 add the start and end to the tuple list
 """
-def find_missing_clues(clues,lower,upper):
-    tuple_list = []
-    i = lower
-    while i <= upper:
-        start = i
-        i+=1
-        if i in clues:
-            tuple_list.append([start,i-1])
 
-    return tuple_list
-
-clues = [0, 1, 3, 50, 75]
-lower = 0
-upper = 99
-print(find_missing_clues(clues, lower, upper))
-
-clues = [-1]
-lower = -1
-upper = -1
-(find_missing_clues(clues, lower, upper))

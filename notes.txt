@@ -1,7 +1,7 @@
 todos 
 
-add in time and space complexity shortcut 
-add multi line comment shortcut 
+
+disable vim 
 add done shortcut 
 add class shortcut 
 add expected and result shortcut 
@@ -11,7 +11,6 @@ create some kind of run all functions
 create codebase skeleton 
 create completion checklist 
 
-add a python debugger 
 add a doing right now reminder page
 
 add lesson notes from every week 
