@@ -1,6 +1,3 @@
 todos 
-
-download pip 
-
-create py file reference for all cheatsheets (currently up to unit 5)
+write out functions and code
 
