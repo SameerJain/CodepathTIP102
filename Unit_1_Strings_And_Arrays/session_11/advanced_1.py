@@ -99,32 +99,53 @@
 # word = "Choir"
 # print(tiggerfy(word))
 
+#! Problem 4
+#! DONE
+#! Problem 2
+class problem_:
+    def function_name(self, param):
+        pass
+    
+    def tests(self):
+        pass
 
-def non_decreasing(nums):
-    errors = 0
-    for i in range(len(nums) - 1):
-        if nums[i] > nums[i + 1]:
-            errors += 1
-            if errors > 1:
-                return False
-            if i == 0 or nums[i - 1] > nums[i + 1]:
-                nums[i + 1] = nums[i]
-            else:
-                nums[i] = nums[i + 1]
+"""
+check the number of violations
+    if the number is more than 1, return false
 
-    return True
+    if theres a violation
+        if the next number is less than the one before it
+            return false
+
+return true
+"""
 
 
-nums = [4, 2, 3]
-print(non_decreasing(nums))
+# def non_decreasing(nums):
+#     count = 0
+#     for idx in range(len(nums) - 1):
+#         if nums[idx] > nums[idx + 1]:
+#             count += 1
+#             if count > 1:
+#                 return False
+#             if idx == 0 or nums[idx - 1] <= nums[idx + 1]:
+#                 nums[idx] = nums[idx + 1]
+#             else:
+#                 nums[idx + 1] = nums[idx]
 
-nums = [4, 2, 1]
-print(non_decreasing(nums))
+#     return True
 
-nums = [3, 4, 2, 3]
+
+# nums = [4, 2, 3]
+# print(non_decreasing(nums))
+
+# nums = [4, 2, 1]
+# print(non_decreasing(nums))
+
+# nums = [4, 4, 2, 3]
+# print(non_decreasing(nums))
 
 # problem 5
-
 """
 create tuple list 
 iterate thru the range of values
@@ -132,4 +153,22 @@ create iterator for lower bound
 keep incrementing until we are 1 less than the clue
 add the start and end to the tuple list
 """
+# def find_missing_clues(clues,lower,upper):
+#     pass
 
+# clues = [0, 1, 3, 50, 75]
+# lower = 0
+# upper = 99
+# find_missing_clues(clues, lower, upper)
+
+# clues = [-1]
+# lower = -1
+# upper = -1
+# find_missing_clues(clues, lower, upper)
+
+# print(f"Expected: {3} -> Result: {find_missing_clues(clues,lower,upper)}")
+
+def test_function(testing):
+    print(testing)
+
+print("Hi")

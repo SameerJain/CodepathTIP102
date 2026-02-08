@@ -1,12 +1,5 @@
 todos 
 
-
-disable vim 
-add done shortcut 
-add class shortcut 
-add expected and result shortcut 
-
-create design pattern documents from claude chat 
 create some kind of run all functions 
 create codebase skeleton 
 create completion checklist 
