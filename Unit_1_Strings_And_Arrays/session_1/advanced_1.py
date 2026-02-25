@@ -99,15 +99,17 @@
 # word = "Choir"
 # print(tiggerfy(word))
 
+
 #! Problem 4
 #! DONE
 #! Problem 2
 class problem_:
     def function_name(self, param):
         pass
-    
+
     def tests(self):
         pass
+
 
 """
 check the number of violations
@@ -145,7 +147,7 @@ return true
 # nums = [4, 4, 2, 3]
 # print(non_decreasing(nums))
 
-# problem 5
+#! Problem 5: Missing Clues
 """
 create tuple list 
 iterate thru the range of values
@@ -153,8 +155,21 @@ create iterator for lower bound
 keep incrementing until we are 1 less than the clue
 add the start and end to the tuple list
 """
-# def find_missing_clues(clues,lower,upper):
-#     pass
+# def find_missing_clues(clues, lower, upper):
+#     result = []
+#     clues.sort()
+#     if lower < clues[0]:
+#         result.append([lower, clues[0] - 1])
+
+#     for i in range(len(clues) - 1):
+#         if clues[i] + 1 != clues[i + 1]:
+#             result.append([clues[i] + 1, clues[i + 1] - 1])
+
+#     if clues[-1] < upper:
+#         result.append([clues[-1] + 1, upper])
+
+#     return print(result)
+
 
 # clues = [0, 1, 3, 50, 75]
 # lower = 0
@@ -166,9 +181,40 @@ add the start and end to the tuple list
 # upper = -1
 # find_missing_clues(clues, lower, upper)
 
-# print(f"Expected: {3} -> Result: {find_missing_clues(clues,lower,upper)}")
+# clues = [3, 50, 75]
+# lower = 2
+# upper = 99
+# find_missing_clues(clues, lower, upper)
 
-def test_function(testing):
-    print(testing)
 
-print("Hi")
+#! Problem 6: Vegetable Harvest
+def harvest(vegetable_patch) -> int | None:
+    count = 0
+    for row in vegetable_patch:
+        for j in range(len(row)):
+            if row[j] == "c":
+                count += 1
+    return count
+
+
+# vegetable_patch = [["x", "c", "x"], ["x", "x", "x"], ["x", "c", "c"], ["c", "c", "c"]]
+# harvest(vegetable_patch)
+
+# #! Problem 7: Eeyore's House
+
+def good_pairs(pile1,pile2,k):
+    pass
+
+pile1 = [1,3,4]
+pile2 = [1,3,4]
+k = 1
+
+pile1 = [1,2,4,12]
+pile2 = [2,4]
+k=3
+good_pairs(pile1,pile2,k)
+
+# #! Problem 8: Local Maximums
+
+# def local_maximums(grid):
+#     pass
