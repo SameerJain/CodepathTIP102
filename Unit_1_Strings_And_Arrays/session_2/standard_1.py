@@ -1,4 +1,4 @@
-#! Problem 1: Reverse Sentence (DONE)
+# Problem 1: Reverse Sentence (DONE)
 """
 split the sentence by word
 reverse the array
@@ -194,13 +194,10 @@ use exclusive or on sets
 """
 
 
-def exclusive_elemts(lst1, lst2):
-    print("hi")
+def exclusive_elemts1(lst1, lst2):
     result = []
     for ele in lst1:
-        print(ele)
         if ele not in lst2:
-            print(result)
             result.append(ele)
     for ele in lst2:
         if ele not in lst1:
@@ -208,22 +205,41 @@ def exclusive_elemts(lst1, lst2):
     return print(result)
 
 
-lst1 = ["pooh", "roo", "piglet"]
-lst2 = ["piglet", "eeyore", "owl"]
-exclusive_elemts(lst1, lst2)
+def exclusive_elemts(lst1, lst2):
+    print(list(set(lst1) ^ set(lst2)))
 
-lst1 = ["pooh", "roo"]
-lst2 = ["piglet", "eeyore", "owl", "kanga"]
-exclusive_elemts(lst1, lst2)
 
-lst1 = ["pooh", "roo", "piglet"]
-lst2 = ["pooh", "roo", "piglet"]
-exclusive_elemts(lst1, lst2)
+# lst1 = ["pooh", "roo", "piglet"]
+# lst2 = ["piglet", "eeyore", "owl"]
+# exclusive_elemts(lst1, lst2)
+
+# lst1 = ["pooh", "roo"]
+# lst2 = ["piglet", "eeyore", "owl", "kanga"]
+# exclusive_elemts(lst1, lst2)
+
+# lst1 = ["pooh", "roo", "piglet"]
+# lst2 = ["pooh", "roo", "piglet"]
+# exclusive_elemts(lst1, lst2)
 
 
 #! Problem 9: Merge Strings Alternately
+"""
+use ptr2 technique from the same side 
+use and while loop 
+
+"""
 def merge_alternately(word1, word2):
-    pass
+
+    wrd1ptr = 0
+    wrd2ptr = 0
+    result = []
+
+    while wrd1ptr < len(word1) - 1 and wrd2ptr < len(word2) - 1:
+        result.append(word1[wrd1ptr])
+        result.append(word1[wrd2ptr])
+        wrd1ptr += 1
+        wrd2ptr += 1
+
 
 
 #! Problem 10: Eeyore's House
