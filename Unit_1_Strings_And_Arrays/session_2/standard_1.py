@@ -228,20 +228,65 @@ use ptr2 technique from the same side
 use and while loop 
 
 """
+
+
 def merge_alternately(word1, word2):
 
     wrd1ptr = 0
     wrd2ptr = 0
     result = []
 
-    while wrd1ptr < len(word1) - 1 and wrd2ptr < len(word2) - 1:
+    while wrd1ptr < len(word1) and wrd2ptr < len(word2):
         result.append(word1[wrd1ptr])
-        result.append(word1[wrd2ptr])
+        result.append(word2[wrd2ptr])
         wrd1ptr += 1
         wrd2ptr += 1
 
+    while wrd1ptr < len(word1):
+        result.append(word1[wrd1ptr])
+        wrd1ptr += 1
+
+    while wrd2ptr < len(word2):
+        result.append(word2[wrd2ptr])
+        wrd2ptr += 1
+
+    return print("".join(result))
+
+
+# word1 = "wol"
+# word2 = "oze"
+# merge_alternately(word1, word2)
+
+# word1 = "hfa"
+# word2 = "eflump"
+# merge_alternately(word1, word2)
+
+# word1 = "eyre"
+# word2 = "eo"
+# merge_alternately(word1, word2)
 
 
 #! Problem 10: Eeyore's House
+
+"""
+use nested for loop
+if number is divisible by k * pile2 add 1 
+"""
 def good_pairs(pile1, pile2, k):
-    pass
+    result = 0
+    for item in pile1:
+        for items in pile2:
+            if item % (items * k) == 0:
+                result += 1
+    return print(result)
+
+
+pile1 = [1, 3, 4]
+pile2 = [1, 3, 4]
+k = 1
+good_pairs(pile1, pile2, k)
+
+pile1 = [1, 2, 4, 12]
+pile2 = [2, 4]
+k = 3
+good_pairs(pile1, pile2, k)
