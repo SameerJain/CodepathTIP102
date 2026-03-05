@@ -1,3 +1,4 @@
+
 #! Done Problem 1: Festival Lineup
 """
 use zip or iterate 
@@ -40,7 +41,7 @@ def get_artist_info(artist,festival_schedule):
 
 # print(get_artist_info("Blood Orange", festival_schedule))
 # print(get_artist_info("Taylor Swift", festival_schedule))
-# Problem 3: Ticket Sales
+#! Done Problem 3: Ticket Sales
 
 def total_sales(ticket_sales):
     sumval = 0
@@ -53,9 +54,16 @@ ticket_sales = {"Friday": 200, "Saturday": 1000, "Sunday": 800, "3-Day Pass": 25
 
 # print(total_sales(ticket_sales))
 
-# Problem 4: Scheduling Conflict
-def identify_conflicts(venue1_schedule, venue2_schedule):
+#! Done Problem 4: Scheduling Conflict
+def identify_conflicts0(venue1_schedule, venue2_schedule):
     return dict((venue1_schedule.items()) & (venue2_schedule.items()))
+
+def identify_conflicts(venue1_schedule, venue2_schedule):
+    newmap = {}
+    for key,value in venue1_schedule.items():
+        if key in venue2_schedule and value == venue2_schedule[key]:
+            newmap[key] = value
+    return newmap
 
 venue1_schedule = {
     "Stromae": "9:00 PM",
@@ -71,11 +79,58 @@ venue2_schedule = {
     "Wizkid": "6:00 PM"
 }
 
-print(identify_conflicts(venue1_schedule, venue2_schedule))
+# print(identify_conflicts(venue1_schedule, venue2_schedule))
 
 # Problem 5: Best Set
 
+#! Way 1, get the raw frequency and return the max 
+#! Way 2, get the sum of all the frequenccies by artist 
+
+def best_set(votes):
+    freq_map = {}
+    for key,value in votes.items():
+        if value in freq_map.keys():
+            freq_map[value] += 1
+        else:
+            freq_map[value] = 1
+    max_val = 0
+    maxname = ''
+    for key,val in freq_map.items():
+        if val > max_val:
+            max_val = val
+            maxname = key
+    return maxname
+
+votes1 = {
+    1234: "SZA",
+    1235: "Yo-Yo Ma",
+    1236: "Ethel Cain",
+    1237: "Ethel Cain",
+    1238: "SZA",
+    1239: "SZA",
+}
+
+votes2 = {
+    1234: "SZA",
+    1235: "Yo-Yo Ma",
+    1236: "Ethel Cain",
+    1237: "Ethel Cain",
+    1238: "SZA",
+}
+
+# print(best_set(votes1))
+# print(best_set(votes2))
+
+
 # Problem 6: Perfromance with Maximum Audience
+def max_audience_performances(audience):
+    
+
+audiences1 = [100, 200, 200, 150, 100, 250]
+audiences2 = [120, 180, 220, 150, 220]
+
+print(max_audience_performances(audiences1))
+print(max_audience_performances(audiences2))
 
 # Problem 7: Performances with Maximum Audience II
 

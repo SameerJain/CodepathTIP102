@@ -343,7 +343,6 @@ words = ["apple", "banana", "cherry", "date"]
 result = sorted(words, key=last_character)
 print(result)  # Output: ['banana', 'apple', 'date', 'cherry']
 
-
 # ============= LAMBDA FUNCTIONS =============
 
 # Lambda with 1 argument
@@ -359,7 +358,6 @@ words = ["apple", "banana", "cherry", "date"]
 result = sorted(words, key=lambda x: x[-1])
 print(result)  # Output: ['banana', 'apple', 'date', 'cherry']
 
-
 # ============= TERNARY OPERATORS =============
 
 a = 10
@@ -373,7 +371,6 @@ if a > b:
     max_value = a
 else:
     max_value = b
-
 
 # ============= DICTIONARY COMPREHENSIONS =============
 
@@ -426,5 +423,3 @@ from collections import defaultdict
 from collections import Counter
 
 # Counter(x) - Creates frequency dictionary automatically
-
-#! Difference between sorted and sort 
